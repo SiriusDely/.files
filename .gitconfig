@@ -1,0 +1,7 @@
+[user]
+  email = siriusdely@icloud.com
+  name = Sirius Dely
+[core]
+  editor = /usr/bin/vim
+  autocrlf = input
+  excludesfile = /Users/sirius/.gitignore_global
