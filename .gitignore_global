@@ -2,6 +2,10 @@
 *.vim
 *.swp
 
+## EMACS
+\#*\#
+.\#*
+
 ### OSX ###
 .DS_Store
 .AppleDouble
