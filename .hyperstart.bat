@@ -11,12 +11,14 @@ ECHO [6] ZSH
 ECHO [7] Babun
 ECHO.
 ECHO [8] restart elevated
-ECHO [9] exit
+ECHO [9] restart UNelevated
+ECHO [x] exit
 ECHO.
 
-CHOICE /N /C:123456789 /M "> "
+CHOICE /N /C:123456789x /M "> "
 CLS
-IF ERRORLEVEL ==9 GOTO end
+IF ERRORLEVEL ==x GOTO end
+IF ERRORLEVEL ==9 powershell -Command "Start-Process hyper"
 IF ERRORLEVEL ==8 powershell -Command "Start-Process hyper -Verb RunAs"
 IF ERRORLEVEL ==7 "%USERPROFILE%\.babun\cygwin\bin\zsh.exe"
 IF ERRORLEVEL ==6 wsl
@@ -31,7 +33,7 @@ ECHO Switch or exit?
 ECHO [1] Switch
 ECHO [2] Exit
 
-CHOICE /N /C:12 /D 2 /T 8 /M "> "
+CHOICE /N /C:12 /D 2 /T 9 /M "> "
 IF ERRORLEVEL ==2 GOTO end
 IF ERRORLEVEL ==1 GOTO top
 
