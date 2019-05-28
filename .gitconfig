@@ -5,3 +5,5 @@
   editor = /usr/bin/vim
   autocrlf = input
   excludesfile = /Users/sirius/.gitignore_global
+[cinnabar]
+	helper = /Users/sirius/.mozbuild/git-cinnabar/git-cinnabar-helper
