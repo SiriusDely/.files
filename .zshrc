@@ -84,11 +84,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi="vim"
 
-export PATH="/usr/local/opt/openssl/bin:$PATH"
-export PATH="/usr/local/opt/curl/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/openssl/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl/include"
-export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 eval "$(rbenv init -)"
 
 export NVM_DIR="$HOME/.nvm"
@@ -97,6 +92,10 @@ export NVM_DIR="$HOME/.nvm"
 source /usr/local/bin/virtualenvwrapper.sh # This loads virtualenvwrapper
 
 source /Users/sirius/.phpbrew/bashrc # This loads phpbrew
+
+export PATH=$PATH:$(go env GOPATH)/bin
+export GOPATH=$(go env GOPATH)
+
 ###-begin-pm2-completion-###
 ### credits to npm for the completion file model
 #
@@ -137,3 +136,16 @@ elif type compctl &>/dev/null; then
   compctl -K _pm2_completion + -f + pm2
 fi
 ###-end-pm2-completion-###
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/sirius/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sirius/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/sirius/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sirius/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PATH="$PATH:/Users/sirius/istio-1.1.1/bin"
+
+# source /Users/sirius/emsdk/emsdk_env.sh
+export PATH="$PATH:/Users/sirius/emsdk:/Users/sirius/emsdk/clang/e1.38.30_64bit:/Users/sirius/emsdk/node/8.9.1_64bit/bin:/Users/sirius/emsdk/emscripten/1.38.30"
+
+export PATH="/Users/sirius/.mozbuild/git-cinnabar:$PATH"
