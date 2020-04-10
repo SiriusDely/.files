@@ -138,10 +138,10 @@ fi
 ###-end-pm2-completion-###
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/sirius/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sirius/google-cloud-sdk/path.zsh.inc'; fi
+# if [ -f '/Users/sirius/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sirius/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/sirius/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sirius/google-cloud-sdk/completion.zsh.inc'; fi
+# if [ -f '/Users/sirius/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sirius/google-cloud-sdk/completion.zsh.inc'; fi
 
 export PATH="$PATH:/Users/sirius/istio-1.1.1/bin"
 
@@ -149,3 +149,13 @@ export PATH="$PATH:/Users/sirius/istio-1.1.1/bin"
 export PATH="$PATH:/Users/sirius/emsdk:/Users/sirius/emsdk/clang/e1.38.30_64bit:/Users/sirius/emsdk/node/8.9.1_64bit/bin:/Users/sirius/emsdk/emscripten/1.38.30"
 
 export PATH="/Users/sirius/.mozbuild/git-cinnabar:$PATH"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/sirius/.nvm/versions/node/v8.15.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/sirius/.nvm/versions/node/v8.15.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/sirius/.nvm/versions/node/v8.15.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/sirius/.nvm/versions/node/v8.15.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/sirius/.nvm/versions/node/v8.15.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/sirius/.nvm/versions/node/v8.15.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
