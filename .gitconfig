@@ -6,4 +6,6 @@
   autocrlf = input
   excludesfile = /Users/sirius/.gitignore_global
 [cinnabar]
-	helper = /Users/sirius/.mozbuild/git-cinnabar/git-cinnabar-helper
+  helper = /Users/sirius/.mozbuild/git-cinnabar/git-cinnabar-helper
+[url "git@bitbucket.org:"]
+  insteadOf = https://bitbucket.org/
