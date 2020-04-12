@@ -9,3 +9,5 @@
   helper = /Users/sirius/.mozbuild/git-cinnabar/git-cinnabar-helper
 [url "git@bitbucket.org:"]
   insteadOf = https://bitbucket.org/
+[merge]
+	tool = vimdiff
