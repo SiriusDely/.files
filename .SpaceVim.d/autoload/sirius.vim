@@ -5,4 +5,5 @@ endf
 func! sirius#after() abort
   :set ignorecase
   :set smartcase
+  let g:indentLine_setConceal = 0
 endf
