@@ -48,6 +48,9 @@ name = 'vim-scripts/editorconfig-vim'
 name = 'vim-scripts/abolish.vim'
 
 [[layers]]
+name = "git"
+
+[[layers]]
 name = "lang#javascript"
 
 [[layers]]
