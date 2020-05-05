@@ -51,13 +51,13 @@ name = 'vim-scripts/abolish.vim'
 name = "git"
 
 [[layers]]
+name = "lang#go"
+
+[[layers]]
 name = "lang#html"
 
 [[layers]]
 name = "lang#javascript"
-
-[[layers]]
-name = "lang#go"
 
 [[layers]]
 name = "lang#ruby"
