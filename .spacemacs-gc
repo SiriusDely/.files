@@ -317,6 +317,8 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (setq neo-vc-integration '(face)) ; Show information by changing the color of the file/directory name.
+  (setq neo-theme 'nerd) ; NeoTree to look most like NERDTree in VIM
   (setq javascript-indent-level 2) ; javascript-mode
   (setq js-indent-level 2) ; js-mode
   (setq js2-basic-offset 2) ; js2-mode, in latest js2-mode, it's alias of js-indent-level
