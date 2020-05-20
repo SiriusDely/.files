@@ -61,3 +61,8 @@ name = "lang#javascript"
 
 [[layers]]
 name = "lang#ruby"
+
+[[layers]]
+name = "lang#rust"
+format-autosave = 1
+recommended-style = 1
