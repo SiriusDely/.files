@@ -96,6 +96,9 @@ source /Users/sirius/.phpbrew/bashrc # This loads phpbrew
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)
 
+export JAVA_HOME="/usr/local/opt/openjdk"
+export PATH="$JAVA_HOME/bin:$PATH"
+
 ###-begin-pm2-completion-###
 ### credits to npm for the completion file model
 #
