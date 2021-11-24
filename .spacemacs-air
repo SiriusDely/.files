@@ -45,6 +45,7 @@ This function should only modify configuration layer settings."
      go
      helm
      javascript
+     json
      lsp
      ;; markdown
      multiple-cursors
