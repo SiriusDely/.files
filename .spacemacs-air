@@ -573,6 +573,7 @@ before packages are loaded."
   (setq js-indent-level 2) ; js-mode
   (setq js2-basic-offset 2) ; js2-mode, in latest js2-mode, it's alias of js-indent-level
   (setq-default
+   standard-indent 2
    ;; js2-mode
    js2-basic-offset 2
    ;; web-mode
