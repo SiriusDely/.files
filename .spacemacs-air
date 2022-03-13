@@ -53,11 +53,14 @@ This function should only modify configuration layer settings."
                  javascript-fmt-tool 'prettier
                  )
      json
-     lsp
+     (lsp :variables
+          ;; lsp-rust-server 'rust-analyzer
+          )
      ;; markdown
      multiple-cursors
      ;; org
      react
+     rust
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -582,6 +585,7 @@ before packages are loaded."
    web-mode-code-indent-offset 2
    web-mode-css-indent-offset 2
    web-mode-markup-indent-offset 2)
+  (setq-default rust-format-on-save t)
   (setq-default typescript-indent-level 2)
   (with-eval-after-load 'web-mode
     (add-to-list 'web-mode-indentation-params '("lineup-args" . nil))
@@ -604,7 +608,8 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
-   '(tagedit slim-mode scss-mode sass-mode rjsx-mode pug-mode helm-css-scss haml-mode flycheck-golangci-lint company-web web-completion-data yaml-mode git-gutter-fringe fringe-helper git-gutter browse-at-remote treemacs-magit smeargle helm-git-grep gitignore-templates git-timemachine git-modes git-messenger git-link forge yaml magit ghub closql emacsql-sqlite emacsql treepy magit-section git-commit with-editor transient godoctor go-tag go-rename go-impl go-guru go-gen-test go-fill-struct go-eldoc company-go go-mode web-mode typescript-mode emmet-mode flyspell-correct-helm flyspell-correct auto-dictionary lsp-ui lsp-origami origami helm-lsp yasnippet-snippets helm-company helm-c-yasnippet fuzzy flycheck-pos-tip pos-tip auto-yasnippet ac-ispell auto-complete web-beautify tern prettier-js npm-mode nodejs-repl livid-mode skewer-mode js2-refactor yasnippet multiple-cursors js2-mode js-doc import-js grizzl impatient-mode htmlize simple-httpd helm-gtags ggtags dap-mode lsp-treemacs bui lsp-mode markdown-mode counsel-gtags counsel swiper ivy company add-node-modules-path ws-butler writeroom-mode winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package undo-tree treemacs-projectile treemacs-persp treemacs-icons-dired treemacs-evil toc-org symon symbol-overlay string-inflection string-edit spaceline-all-the-icons restart-emacs request rainbow-delimiters quickrun popwin pcre2el password-generator paradox overseer org-superstar open-junk-file nameless multi-line macrostep lorem-ipsum link-hint inspector info+ indent-guide hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-org helm-mode-manager helm-make helm-ls-git helm-flx helm-descbinds helm-ag google-translate golden-ratio font-lock+ flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu emr elisp-slime-nav editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish define-word column-enforce-mode clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile aggressive-indent ace-link ace-jump-helm-line)))
+   '(toml-mode ron-mode racer rust-mode flycheck-rust cargo tagedit slim-mode scss-mode sass-mode rjsx-mode pug-mode helm-css-scss haml-mode flycheck-golangci-lint company-web web-completion-data yaml-mode git-gutter-fringe fringe-helper git-gutter browse-at-remote treemacs-magit smeargle helm-git-grep gitignore-templates git-timemachine git-modes git-messenger git-link forge yaml magit ghub closql emacsql-sqlite emacsql treepy magit-section git-commit with-editor transient godoctor go-tag go-rename go-impl go-guru go-gen-test go-fill-struct go-eldoc company-go go-mode web-mode typescript-mode emmet-mode flyspell-correct-helm flyspell-correct auto-dictionary lsp-ui lsp-origami origami helm-lsp yasnippet-snippets helm-company helm-c-yasnippet fuzzy flycheck-pos-tip pos-tip auto-yasnippet ac-ispell auto-complete web-beautify tern prettier-js npm-mode nodejs-repl livid-mode skewer-mode js2-refactor yasnippet multiple-cursors js2-mode js-doc import-js grizzl impatient-mode htmlize simple-httpd helm-gtags ggtags dap-mode lsp-treemacs bui lsp-mode markdown-mode counsel-gtags counsel swiper ivy company add-node-modules-path ws-butler writeroom-mode winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package undo-tree treemacs-projectile treemacs-persp treemacs-icons-dired treemacs-evil toc-org symon symbol-overlay string-inflection string-edit spaceline-all-the-icons restart-emacs request rainbow-delimiters quickrun popwin pcre2el password-generator paradox overseer org-superstar open-junk-file nameless multi-line macrostep lorem-ipsum link-hint inspector info+ indent-guide hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-org helm-mode-manager helm-make helm-ls-git helm-flx helm-descbinds helm-ag google-translate golden-ratio font-lock+ flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu emr elisp-slime-nav editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish define-word column-enforce-mode clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile aggressive-indent ace-link ace-jump-helm-line))
+ '(safe-local-variable-values '((javascript-fmt-tool))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
