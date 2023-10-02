@@ -49,6 +49,7 @@ This function should only modify configuration layer settings."
          )
      helm
      html
+     java
      (javascript :variables
                  javascript-fmt-on-save t
                  javascript-fmt-tool 'prettier
@@ -576,6 +577,8 @@ before packages are loaded."
   (setq javascript-indent-level 2) ; javascript-mode
   (setq js-indent-level 2) ; js-mode
   (setq js2-basic-offset 2) ; js2-mode, in latest js2-mode, it's alias of js-indent-level
+  (setq js2-mode-show-parse-errors nil
+        js2-mode-show-strict-warnings nil)
   (setq-default
    standard-indent 2
    ;; js2-mode
